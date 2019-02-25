@@ -1,13 +1,18 @@
 FROM "python:3.7-alpine"
 
+ENV ANSIBLELINT_VERSION=4.1.0
+
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
 
-RUN apk --no-cache add --virtual build-dependencies \
-        build-base libffi-dev libressl-dev && \
-    pip install --no-cache-dir ansible-lint && \
-    apk del build-dependencies
+USER root
+
+ADD ./resources /resources
+
+RUN /resources/build && rm -rf resources
+
+ENTRYPOINT [ 'ansible-lint']
 
 LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.name"="ansible-lint" \

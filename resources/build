@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -ex
+
+apk --no-cache add --virtual build-dependencies \
+    build-base \
+    libffi-dev \
+    libressl-dev
+
+pip install --no-cache-dir \
+    "ansible-lint==${ANSIBLELINT_VERSION}"
+
+apk del build-dependencies
+
