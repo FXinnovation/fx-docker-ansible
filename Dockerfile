@@ -12,8 +12,6 @@ ADD ./resources /resources
 
 RUN /resources/build && rm -rf resources
 
-ENTRYPOINT [ 'ansible-lint']
-
 LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.name"="ansible-lint" \
       "org.label-schema.base-image.name"="docker.io/library/python" \
@@ -28,3 +26,6 @@ LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.version"="$VERSION" \
       "org.label-schema.build-date"="$BUILD_DATE" \
       "org.label-schema.usage"="docker run --rm -v $(pwd):/data fxinnovation/ansible-lint -p ."
+
+ENTRYPOINT [ "/usr/local/bin/ansible-lint" ]
+CMD [ "--help" ]
