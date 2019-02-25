@@ -25,7 +25,7 @@ LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.vcs-ref"="$VCS_REF" \
       "org.label-schema.version"="$VERSION" \
       "org.label-schema.build-date"="$BUILD_DATE" \
-      "org.label-schema.usage"="docker run --rm -v $(pwd):/data fxinnovation/ansible-lint -p ."
+      "org.label-schema.usage"="docker run --rm -v $(pwd):/data fxinnovation/ansible-lint -p /data"
 
 ENTRYPOINT [ "/usr/local/bin/ansible-lint" ]
 CMD [ "--help" ]
