@@ -6,7 +6,7 @@ ARG VERSION
 
 RUN apk --no-cache add --virtual build-dependencies \
         build-base libffi-dev libressl-dev && \
-    pip install --no-cache-dir ansible-lint ansible-lint-junit && \
+    pip install --no-cache-dir ansible-lint && \
     apk del build-dependencies
 
 LABEL "maintainer"="cloudsquad@fxinnovation.com" \
