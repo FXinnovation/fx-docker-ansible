@@ -1,4 +1,4 @@
 fxDockerImage(
-  image: 'ansible-lint',
+  image: 'ansible',
   pushLatest: true
 )
