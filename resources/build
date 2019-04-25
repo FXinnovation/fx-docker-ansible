@@ -7,8 +7,13 @@ apk --no-cache add --virtual build-dependencies \
     libffi-dev \
     libressl-dev
 
-pip install --no-cache-dir \
-    "ansible-lint==${ANSIBLELINT_VERSION}"
+pip install --no-cache-dir "ansible==${ANSIBLE_VERSION}"
+
+pip install --no-cache-dir "ansible-lint==${ANSIBLELINT_VERSION}"
 
 apk --no-cache del build-dependencies
 
+touch /etc/login.defs
+chmod 0444 /etc/login.defs
+
+chmod 0600 /etc/shadow
