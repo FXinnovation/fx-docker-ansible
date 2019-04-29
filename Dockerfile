@@ -29,6 +29,4 @@ LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.build-date"="$BUILD_DATE" \
       "org.label-schema.usage"="docker run --rm -v $(pwd):/data fxinnovation/ansible -p /data"
 
-ENTRYPOINT [ "/usr/local/bin/ansible" ]
-
 CMD [ "--help" ]
