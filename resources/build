@@ -7,6 +7,8 @@ apk --no-cache add --virtual build-dependencies \
     libffi-dev \
     libressl-dev
 
+apk --no-cache add git
+
 pip install --no-cache-dir "ansible==${ANSIBLE_VERSION}"
 
 pip install --no-cache-dir "ansible-lint==${ANSIBLELINT_VERSION}"
