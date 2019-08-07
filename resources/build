@@ -9,9 +9,10 @@ apk --no-cache add --virtual build-dependencies \
 
 apk --no-cache add git openssh-client
 
-pip install --no-cache-dir "ansible==${ANSIBLE_VERSION}"
-
-pip install --no-cache-dir "ansible-lint==${ANSIBLELINT_VERSION}"
+pip install --no-cache-dir \
+    "ansible==${ANSIBLE_VERSION}" \
+    "ansible-lint==${ANSIBLELINT_VERSION}" \
+    "ruamel.yaml==${RUAMELYAML_VERSION}"
 
 apk --no-cache del build-dependencies
 
