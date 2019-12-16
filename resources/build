@@ -12,7 +12,9 @@ apk --no-cache add git openssh-client
 pip install --no-cache-dir \
     "ansible==${ANSIBLE_VERSION}" \
     "ansible-lint==${ANSIBLELINT_VERSION}" \
-    "ruamel.yaml==${RUAMELYAML_VERSION}"
+    "ruamel.yaml==${RUAMELYAML_VERSION}" \
+    "botocore==${BOTOCORE_VERSION}" \
+    "boto3==${BOTO3_VERSION}"
 
 apk --no-cache del build-dependencies
 
