@@ -1,10 +1,10 @@
-FROM "python:3.7-alpine3.9"
+FROM "python:3.8-alpine3.11"
 
-ENV ANSIBLE_VERSION=2.7.10
-ENV ANSIBLELINT_VERSION=4.1.0
-ENV RUAMELYAML_VERSION=0.15.100
-ENV BOTOCORE_VERSION=1.13.38
-ENV BOTO3_VERSION=1.10.38
+ENV ANSIBLE_VERSION=2.9.4
+ENV ANSIBLELINT_VERSION=4.2.0
+ENV RUAMELYAML_VERSION=0.16.6
+ENV BOTOCORE_VERSION=1.14.9
+ENV BOTO3_VERSION=1.11.9
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -19,7 +19,7 @@ RUN /resources/build && rm -rf resources
 LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.name"="ansible" \
       "org.label-schema.base-image.name"="docker.io/library/python" \
-      "org.label-schema.base-image.version"="3.7-alpine3.9" \
+      "org.label-schema.base-image.version"="3.8-alpine3.11" \
       "org.label-schema.description"="Ansible (and ansible-lint) in a container" \
       "org.label-schema.url"="https://github.com/ansible/ansible" \
       "org.label-schema.vcs-url"="https://scm.dazzlingwrench.fxinnovation.com/fxinnovation-public/docker-ansible" \
