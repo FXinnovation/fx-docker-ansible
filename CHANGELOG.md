@@ -5,4 +5,5 @@
 * maintenance: pin botocore version to 1.16.24
 * maintenance: pin boto3 version to 1.13.24
 * doc: add CHANGELOG.md
+* doc: add LICENSE file
 * chore: update .pre-commit to latest versions
