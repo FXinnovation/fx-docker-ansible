@@ -1,3 +1,12 @@
+1.5.0
+=====
+
+* maintenance: pin docker image alpine version to 3.12
+* maintenance: pin ansible version to 2.9.11
+* maintenance: pin botocore version to 1.17.23
+* maintenance: pin boto3 version to 1.14.23
+* chore: update .pre-commit to latest versions
+
 1.4.0
 =====
 
