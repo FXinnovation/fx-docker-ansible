@@ -1,3 +1,8 @@
+1.6.0
+=====
+
+* maintenance: pin ansible version to 2.9.12
+
 1.5.0
 =====
 
