@@ -7,7 +7,12 @@ apk --no-cache add --virtual build-dependencies \
     libffi-dev \
     libressl-dev
 
-apk --no-cache add git openssh-client
+apk --no-cache add \
+    git \
+    cargo \
+    openssh-client \
+    openssl-dev \
+    rust
 
 pip install --no-cache-dir \
     "ansible==${ANSIBLE_VERSION}" \
