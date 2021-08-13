@@ -1,4 +1,4 @@
-FROM "python:3.8-alpine3.12"
+FROM "python:3.9.6-alpine3.14"
 
 ENV ANSIBLE_VERSION=2.9.12
 ENV ANSIBLELINT_VERSION=4.2.0
@@ -19,7 +19,7 @@ RUN /resources/build && rm -rf resources
 LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.name"="ansible" \
       "org.label-schema.base-image.name"="docker.io/library/python" \
-      "org.label-schema.base-image.version"="3.8-alpine3.12" \
+      "org.label-schema.base-image.version"="3.9.6-alpine3.14" \
       "org.label-schema.description"="Ansible (and ansible-lint) in a container" \
       "org.label-schema.url"="https://github.com/ansible/ansible" \
       "org.label-schema.vcs-url"="https://scm.dazzlingwrench.fxinnovation.com/fxinnovation-public/docker-ansible" \
