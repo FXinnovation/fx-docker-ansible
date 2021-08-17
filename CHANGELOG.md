@@ -2,10 +2,11 @@
 =====
 
 * (BREAKING) chore: pins ansible-lint to v5.1.2
+* feat: pins ansible to 2.10.7
 * chore: pins python base image to 3.9.6-alpine3.14
-* chore: pins ansible to 2.11.4rc1
 * chore: pins botocore to 1.21.20
 * chore: pins boto3 to 1.18.20
+* chore: pins pre-commit-hooks to v4.0.1
 * fix: cryptography package installation failure
 
 1.6.0
